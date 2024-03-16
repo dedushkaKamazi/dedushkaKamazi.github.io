@@ -3,6 +3,14 @@
     background-color: @color-gray-100;
 }
 
+.example__container {
+    @media (min-width: @breakpoint-large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+}
+
 .example__text {
     color: @color-gray-700;
 }

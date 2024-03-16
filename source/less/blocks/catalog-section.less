@@ -1,6 +1,26 @@
+.catalog-section__container {
+    @media (min-width: @breakpoint-large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+}
+
 .catalog-section__item {
     background-color: @color-gray-50;
     padding: 20px;
+
+    & + & {
+        margin-top: 20px;
+
+        @media (min-width: @breakpoint-medium) {
+            margin-top: 30px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            margin-top: 0;
+        }
+    }
 }
 
 .catalog-section__heading {
