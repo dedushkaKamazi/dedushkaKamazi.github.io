@@ -14,3 +14,23 @@
     padding: 0;
     list-style: none;
 }
+
+.field-group__list--contact {
+    @media (min-width: @breakpoint-large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+}
+
+.field-group__list--additional {
+    @media (min-width: @breakpoint-medium) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

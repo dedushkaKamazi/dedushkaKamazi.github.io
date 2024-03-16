@@ -2,6 +2,28 @@
     padding: 0;
 }
 
+.form__container {
+    @media (min-width: @breakpoint-large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+}
+
 .form__group {
     margin: 0;
+}
+
+.form__group--contact,
+.form__group--comment,
+.form__group--additional {
+    @media (min-width: @breakpoint-large) {
+        grid-column: 1 / -1;
+    }
+}
+
+.form__footer {
+    @media (min-width: @breakpoint-large) {
+        grid-column: 1 / -1;
+    }
 }

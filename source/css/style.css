@@ -240,6 +240,25 @@
 .catalog-list {
   padding: 20px;
 }
+@media (min-width: 768px) {
+  .catalog-list__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+@media (min-width: 1300px) {
+  .catalog-list__container {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 64px;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    background-color: #f2f2f2;
+  }
+}
 .card__heading {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -266,14 +285,33 @@
 .catalog-additional {
   padding: 20px;
 }
+.catalog-additional__container {
+  display: grid;
+}
+@media (min-width: 1300px) {
+  .catalog-additional__container {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
 .catalog-additional__list {
   list-style: none;
+}
+@media (min-width: 1300px) {
+  .catalog-additional__list {
+    grid-column: 1 / -2;
+  }
 }
 .catalog-additional__heading {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
+}
+@media (min-width: 1300px) {
+  .catalog-additional__heading {
+    grid-column: 1 / -1;
+  }
 }
 .card-row {
   padding: 20px;
@@ -302,8 +340,27 @@
 .form {
   padding: 0;
 }
+@media (min-width: 1300px) {
+  .form__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
 .form__group {
   margin: 0;
+}
+@media (min-width: 1300px) {
+  .form__group--contact,
+  .form__group--comment,
+  .form__group--additional {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 1300px) {
+  .form__footer {
+    grid-column: 1 / -1;
+  }
 }
 .field-group {
   padding: 20px;
@@ -318,6 +375,25 @@
 .field-group__list {
   padding: 0;
   list-style: none;
+}
+@media (min-width: 1300px) {
+  .field-group__list--contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .field-group__list--additional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+@media (min-width: 1300px) {
+  .field-group__list--additional {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .control {
   font-family: "Oswald", "Arial", sans-serif;
