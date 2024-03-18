@@ -1,0 +1,36 @@
+.social {
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+    @media (min-width: @breakpoint-medium) {
+        padding: 0;
+    }
+}
+
+.social__item {
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.social__link {
+    display: block;
+    padding: 8px;
+    color: @color-gray-600;
+
+    &:hover {
+        color: @color-primary-500;
+    }
+
+    &:active {
+        color: @color-primary-500;
+        opacity: 0.3;
+    }
+
+    svg {
+        display: block;
+    }
+}

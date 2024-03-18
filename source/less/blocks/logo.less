@@ -1,9 +1,31 @@
 .logo {
-    @media (max-width: @breakpoint-small) {
+    &:not(.logo--footer) {
         display: grid;
         grid-template-columns: 34px 1fr;
         align-items: center;
-        gap: 16;
+        gap: 16px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    img {
+        display: block;
+    }
+}
+
+.logo--footer {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: @breakpoint-small) {
+        padding: 8px;
+        justify-content: center;
     }
 }
 

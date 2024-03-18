@@ -1,6 +1,10 @@
 .page-footer {
+    padding: 22px 0 20px;
     background-color: @color-gray-50;
-    padding: 20px;
+
+    @media (min-width: @breakpoint-medium) {
+        padding: 58px 0 55px;
+    }
 }
 
 .page-footer__container {
@@ -8,5 +12,21 @@
         display: grid;
         grid-template-columns: 163px 1fr 163px;
         gap: 16px;
+    }
+}
+
+.page-footer__logo {
+    @media (max-width: @breakpoint-small) {
+        margin-bottom: 24px;
+    }
+}
+
+.page-footer__social {
+    margin: 0;
+
+    @media (max-width: @breakpoint-small) {
+        margin-bottom: 22px;
+        border-top: 1px solid @color-gray-200;
+        border-bottom: 1px solid @color-gray-200;
     }
 }

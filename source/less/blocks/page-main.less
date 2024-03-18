@@ -1,9 +1,16 @@
 .page-main__heading {
+    margin: 0;
+    margin-bottom: 40px;
     font-family: @font-heading;
     font-size: 36px;
-    line-height: 36px;
+    line-height: 40px;
     font-weight: 400;
-    color: @color-black;
+
+    @media (min-width: @breakpoint-medium) {
+        margin-bottom: 32px;
+        font-size: 60px;
+        line-height: 1;
+    }
 }
 
 .page-main__subheading {
